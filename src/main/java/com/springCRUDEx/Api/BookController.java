@@ -20,8 +20,15 @@ public class BookController {
 	@PostMapping("/add")
 	public String addBook(@RequestBody Book book)
 	{
-		return bookDal.addBook(book);
+		try {
+			return bookDal.addBook(book);
+		}
 		
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return "hata";
+		}
 	}
 	
 	@GetMapping("/get")
