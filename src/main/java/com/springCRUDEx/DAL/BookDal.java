@@ -20,8 +20,16 @@ public class BookDal {
  @Transactional
   public String addBook(Book book)
   {
-	  bookRepository.save(book);
-	  return "Book Added with id : " + book.getId();
+	 try {
+		  bookRepository.save(book);
+		  return "Book Added with id : " + book.getId();
+	 }
+	 catch(Exception e)
+	 {
+		 e.printStackTrace();
+		 return "hata";
+	 }
+
   }
   
 	@Transactional
