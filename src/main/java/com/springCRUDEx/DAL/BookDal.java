@@ -27,7 +27,7 @@ public class BookDal {
 	 catch(Exception e)
 	 {
 		 e.printStackTrace();
-		 return "hata";
+		 return e.getMessage();
 	 }
 
   }
