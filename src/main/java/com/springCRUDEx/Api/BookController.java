@@ -27,7 +27,7 @@ public class BookController {
 		catch(Exception e)
 		{
 			e.printStackTrace();
-			return e.getLocalizedMessage();
+			return e.getMessage();
 		}
 	}
 	
