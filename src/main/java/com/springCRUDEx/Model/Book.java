@@ -1,5 +1,6 @@
 package com.springCRUDEx.Model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Getter;
@@ -12,7 +13,7 @@ import lombok.ToString;
 @ToString
 @Document(collection = "books")
 public class Book {
-	
+	@Id
 	private Integer id;
 	private String name ;
 	private String author;
